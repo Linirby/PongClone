@@ -23,6 +23,8 @@ class Game:
     def run(self) -> None:
         while True:
             
+            print(self.ball.speed)
+            
             self.displaySurface.fill((0, 0, 0))
             pygame.draw.rect(self.displaySurface, (255, 255, 255), (310, 0, 1, 360))
             
