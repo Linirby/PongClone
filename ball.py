@@ -8,7 +8,7 @@ class Ball(pygame.sprite.Sprite):
         self.rect = pygame.Rect(305, 165, 10, 10)
         
         self.speed = 4
-        self.maxSpeed = 6
+        self.maxSpeed = 5
         self.direction = pygame.Vector2()
         self.direction.x = choice([-1, 1])
         self.direction.y = 1
