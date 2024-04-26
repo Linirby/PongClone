@@ -26,14 +26,14 @@ class Ball(pygame.sprite.Sprite):
                 offsetBottom = self.rect.bottom - collider.top
                 offsetRight = collider.left - self.rect.right
                 offsetLeft = self.rect.left - collider.right
-                if offsetRight < 9 and offsetRight > -9 or offsetLeft < 9 and offsetLeft > -9:
+                if offsetRight < 8 and offsetRight > -8 or offsetLeft < 8 and offsetLeft > -8:
                     if self.rect.right >= collider.left or self.rect.left <= collider.right and offsetTop < 5 and offsetTop > -5:
                         self.direction.x *= -1
-                        if self.speed < self.maxSpeed : self.speed += 0.2
-                if offsetTop < 9 and offsetTop > -9 or offsetBottom < 9 and offsetBottom > -9:
+                        if self.speed < self.maxSpeed : self.speed += 0.25
+                if offsetTop < 8 and offsetTop > -8 or offsetBottom < 8 and offsetBottom > -8:
                     if self.rect.top <= collider.bottom or self.rect.bottom >= collider.top:
                         self.direction.y *= -1
-                        if self.speed < self.maxSpeed : self.speed += 0.2
+                        if self.speed < self.maxSpeed : self.speed += 0.25
     
     def draw(self) -> None:
         pygame.draw.rect(self.surface, (255, 255, 255), self.rect)
